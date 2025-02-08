@@ -2,7 +2,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: 'VT323', monospace;
     background-color: #121212;
@@ -87,6 +87,15 @@ body {
     margin-top: 20px;
 }
 
+/* Footer Fix */
+.footer {
+    margin-top: auto;
+    font-size: 16px;
+    color: #FFD700;
+    text-align: center;
+    padding: 10px;
+}
+
 @media (max-width: 600px) {
     #game-board {
         grid-template-columns: repeat(15, 15px);
@@ -104,5 +113,10 @@ body {
     
     #instruction-text {
         font-size: 16px;
+    }
+
+    #logo {
+        height: 100px;
+        width: 100px;
     }
 }
