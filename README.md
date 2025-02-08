@@ -1,5 +1,7 @@
 # Snake Game
 
+![screenshot](screenshot.png)
+
 A Retro Snake Game inspired by the iconic Nokia Snake game using vanilla HTML, CSS, and JavaScript.
 
 ## Features
@@ -17,6 +19,14 @@ A Retro Snake Game inspired by the iconic Nokia Snake game using vanilla HTML, C
 - **CSS**: Styling the game elements.
 - **JavaScript**: Logic for game mechanics, including snake movement, food generation, collision detection, and score tracking.
 
+## View the Game
+You can play the game live at:  
+[Play Snake Game](https://snake-game-ashmita.netlify.app/)
+
+## Repository
+Access the source code and contribute to the project here:  
+[GitHub Repository](https://github.com/ashmita41/SnakeGame)
+
 ## Installation
 1. Clone this repository to your local machine.
     ```bash
@@ -31,10 +41,6 @@ A Retro Snake Game inspired by the iconic Nokia Snake game using vanilla HTML, C
 - The game ends when a collision is detected, and your score will be shown.
 - Your highest score will be saved and displayed in the game.
 
-## Screenshot
-![screenshot](screenshot.png)
-
 ## Contributing
 Feel free to fork the repository, submit issues, or make pull requests if you want to contribute.
-
 
