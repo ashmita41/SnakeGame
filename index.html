@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>snake</title>
-    <script type="module">
-      document.body.innerHTML = `<canvas id="canvas"
-        width="256" height="256" style="background: black;">`;
-      let ctx   = canvas.getContext("2d");
-      let snake = [[8,8]], apple = [4,4], [dx,dy] = [0,0];
-      onkeydown = ({key}) => [dx,dy] =
-        { [key]: [dx,dy], ArrowRight:[dx||1, 0], ArrowLeft:[dx||-1, 0] ,
-                          ArrowDown: [0, dy||1], ArrowUp:  [0, dy||-1] }[key];
-      setInterval(() => {
-        snake.unshift([ (snake[0][0] + dx) & 15 ,
-                        (snake[0][1] + dy) & 15 ]);
-        if(""+snake[0] == apple)
-          do apple = [ Math.floor(Math.random()*16) ,
-                       Math.floor(Math.random()*16) ];
-          while(snake.some(seg => ""+seg == apple));
-        else if(snake.slice(1).some(seg => ""+seg == snake[0]))
-          snake.splice(1);
-        else
-          snake.pop();
-        ctx.clearRect(0, 0, 256, 256);
-        ctx.fillStyle = "red";
-        ctx.fillRect(apple[0]*16, apple[1]*16, 16, 16);
-        ctx.fillStyle = "lime";
-        snake.forEach(([x,y]) => ctx.fillRect(x*16, y*16, 16, 16));
-      }, 125);
-    </script>
-  </head>
-  <body>
-    
-    <h1>🐍 Ashmita's Cool Snake Game - So that nostalgia hits you hard!!! 🎮</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap" rel="stylesheet">
+    <title>Snake Game</title>
+    <link rel="icon" type="image/x-icon" href="favicon.webp">
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div>
+      <div class="scores">
+        <h1 id="score">000</h1>
+        <h1 id="highScore">000</h1>
+      </div>
+      <div class="game-border-1">
+        <div class="game-border-2">
+          <div class="game-border-3">
+            <div id="game-board"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 id="instruction-text">Press spacebar to start the game</h1>
+    <img id="logo" src="snake-game-ai-gen-image-removebg-preview.png" alt="snake-logo" />
   </body>
 </html>
